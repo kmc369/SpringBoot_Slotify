@@ -9,7 +9,7 @@ import com.slotify.demo.model.User;
 @Repository
 public interface UserRepo  extends JpaRepository<User,Integer> {
 
-    UserFound = UserRepo.findByEmail(user.getEmail());
+    User findByEmail(String email);
     
 
 }
