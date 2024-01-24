@@ -1,15 +1,15 @@
 package com.slotify.demo.repository;
-
+import java.util.*;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
-import com.slotify.demo.model.User;
+
+import com.slotify.demo.model.Movie;
 
 @Repository
-public interface UserRepo  extends JpaRepository<User,Integer> {
+public interface UserRepo  extends JpaRepository<Movie,Integer> {
 
-    User findByEmail(String email);
     
 
 }

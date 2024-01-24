@@ -1,5 +1,5 @@
 package com.slotify.demo.model;
-
+import java.util.*;
 import jakarta.persistence.*;
 
 @Entity
@@ -20,6 +20,8 @@ public class User {
   @Column(name = "password")
   private String hashedPassword;
 
+  @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+  private List<Movie> movies;
   public User() {}
 
   public User(int id, String username, String email, String hashedPassword) {
@@ -33,6 +35,14 @@ public class User {
     this.email = email;
     this.hashedPassword = hashedPassword;
   }
+
+  public List<Movie> getMovies() {
+    return this.movies;
+}
+
+  public void setMovies(List<Movie> movies) {
+    this.movies = movies;
+}
 
   public int getId() {
     return this.id;
