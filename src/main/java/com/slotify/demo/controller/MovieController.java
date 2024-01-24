@@ -3,7 +3,7 @@ import java.util.*;
 import com.slotify.demo.service.MovieService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import com.slotify.demo.model.Movie;
 @RestController
 @RequestMapping("/api/movies")
 public class MovieController {
@@ -18,7 +18,7 @@ public class MovieController {
         List<Movie> movies = movieService.findAll();
         
 
-        return movies
+        return movies;
     }
 
 }
