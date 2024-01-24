@@ -3,7 +3,7 @@ package com.slotify.demo.model;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 public class User {
 
   @Id
@@ -85,4 +85,6 @@ public class User {
       "}"
     );
   }
+
+  
 }
