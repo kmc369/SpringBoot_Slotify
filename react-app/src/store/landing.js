@@ -18,7 +18,7 @@ export const get_movies=(data)=>{
 export const getMoviesThunk = () => async(dispatch,getState) => {
    
     try{
-        const res = await fetch('/api/movies/',{
+        const res = await fetch('/api/songs/',{
             method:"GET"
         })
 

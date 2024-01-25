@@ -11,8 +11,8 @@ public class Song{
     @Column(name = "song_id")
     private int id;
 
-    @Column(name = "genre")
-    private String genre;
+    @Column(name = "type")
+    private String type;
 
     @Column(name = "name")
     private String name;
@@ -54,9 +54,9 @@ public class Song{
     }
 
 
-    public Song(int id, String genre, String name, String time, String audioUrl, User user, Artist artist, Album album, Playlist playlist) {
+    public Song(int id, String type, String name, String time, String audioUrl, User user, Artist artist, Album album, Playlist playlist) {
         this.id = id;
-        this.genre = genre;
+        this.type = type;
         this.name = name;
         this.time = time;
         this.audioUrl = audioUrl;
@@ -76,12 +76,12 @@ public class Song{
         this.id = id;
     }
 
-    public String getGenre() {
-        return this.genre;
+    public String getType() {
+        return this.type;
     }
 
-    public void setGenre(String genre) {
-        this.genre = genre;
+    public void setType(String genre) {
+        this.type = type;
     }
 
     public String getName() {
@@ -145,7 +145,7 @@ public class Song{
     public String toString() {
         return "{" +
             " id='" + getId() + "'" +
-            ", genre='" + getGenre() + "'" +
+            ", genre='" + getType() + "'" +
             ", name='" + getName() + "'" +
             ", time='" + getTime() + "'" +
             ", audioUrl='" + getAudioUrl() + "'" +

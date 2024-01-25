@@ -1,4 +1,5 @@
 package com.slotify.demo.model;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.*;
 import java.util.List;
@@ -22,6 +23,7 @@ public class Playlist {
     private String description;
 
     @OneToMany(mappedBy = "playlist", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonIgnore
     private List<Song> songs;
 
     @ManyToOne

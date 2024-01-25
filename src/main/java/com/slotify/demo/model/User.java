@@ -2,6 +2,7 @@ package com.slotify.demo.model;
 import java.util.*;
 import jakarta.persistence.*;
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "users")
@@ -26,9 +27,11 @@ public class User {
   private String hashedPassword;
 
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+  @JsonIgnore
   private List<Song> songs;
 
   @OneToMany(mappedBy="user", cascade = CascadeType.ALL)
+  @JsonIgnore
   private List<Playlist> playlists;
 
 

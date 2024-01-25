@@ -8,22 +8,18 @@ export default function Landing(){
 const dispatch = useDispatch()
 let [movies,setMovies] = useState([])
 
-useEffect(()=>{
-
+useEffect(() => {
     async function fetchMovies() {
-   
-        movies = await dispatch(movieActions.getMoviesThunk())
-       
-        setMovies(movies)
+      try {
+        // Assuming getMoviesThunk returns a promise
+        await dispatch(movieActions.getMoviesThunk());
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+      }
     }
-    fetchMovies()
- 
 
-
-
-
-
-},[dispatch])
+    fetchMovies();
+  }, [dispatch]);
 
 
     return(
