@@ -21,7 +21,7 @@ public class User {
   private String hashedPassword;
 
   @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-  private List<Movie> movies;
+  private List<Song> songs;
   public User() {}
 
   public User(int id, String username, String email, String hashedPassword) {
@@ -36,12 +36,12 @@ public class User {
     this.hashedPassword = hashedPassword;
   }
 
-  public List<Movie> getMovies() {
-    return this.movies;
+  public List<Song> getSongs() {
+    return this.songs;
 }
 
-  public void setMovies(List<Movie> movies) {
-    this.movies = movies;
+  public void setSongs(List<Song> songs) {
+    this.songs =songs ;
 }
 
   public int getId() {
