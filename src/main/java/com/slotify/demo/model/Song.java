@@ -11,8 +11,8 @@ public class Song{
     @Column(name = "song_id")
     private int id;
 
-    @Column(name = "genre")
-    private String genre;
+    @Column(name = "type")
+    private String type;
 
     @Column(name = "name")
     private String name;
@@ -25,7 +25,7 @@ public class Song{
 
 
 
-
+    //relationships 
    
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -41,9 +41,9 @@ public class Song{
     private Album album;
 
 
-    // @ManyToOne
-    // @JoinColumn(name = "playlist_id")
-    // private Playlist playlist;
+    @ManyToOne
+    @JoinColumn(name = "playlist_id")
+    private Playlist playlist;
 
     
 
@@ -52,6 +52,111 @@ public class Song{
 
     public Song() {
     }
+
+
+    public Song(int id, String type, String name, String time, String audioUrl, User user, Artist artist, Album album, Playlist playlist) {
+        this.id = id;
+        this.type = type;
+        this.name = name;
+        this.time = time;
+        this.audioUrl = audioUrl;
+        this.user = user;
+        this.artist = artist;
+        this.album = album;
+        this.playlist = playlist;
+    }
+
+
+
+    public int getId() {
+        return this.id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getType() {
+        return this.type;
+    }
+
+    public void setType(String genre) {
+        this.type = type;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getTime() {
+        return this.time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public String getAudioUrl() {
+        return this.audioUrl;
+    }
+
+    public void setAudioUrl(String audioUrl) {
+        this.audioUrl = audioUrl;
+    }
+
+    public User getUser() {
+        return this.user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Artist getArtist() {
+        return this.artist;
+    }
+
+    public void setArtist(Artist artist) {
+        this.artist = artist;
+    }
+
+    public Album getAlbum() {
+        return this.album;
+    }
+
+    public void setAlbum(Album album) {
+        this.album = album;
+    }
+
+    public Playlist getPlaylist() {
+        return this.playlist;
+    }
+
+    public void setPlaylist(Playlist playlist) {
+        this.playlist = playlist;
+    }
+
+
+    @Override
+    public String toString() {
+        return "{" +
+            " id='" + getId() + "'" +
+            ", genre='" + getType() + "'" +
+            ", name='" + getName() + "'" +
+            ", time='" + getTime() + "'" +
+            ", audioUrl='" + getAudioUrl() + "'" +
+            ", user='" + getUser() + "'" +
+            ", artist='" + getArtist() + "'" +
+            ", album='" + getAlbum() + "'" +
+            ", playlist='" + getPlaylist() + "'" +
+            "}";
+    }
+
+
 
 
 

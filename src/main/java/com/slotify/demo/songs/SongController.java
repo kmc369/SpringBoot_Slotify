@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.slotify.demo.model.Song;
 
 @RestController
-@RequestMapping("/api/Songs")
+@RequestMapping("/api/songs")
 @CrossOrigin(origins = "http://localhost:3000")
 public class SongController {
 
@@ -18,7 +18,7 @@ public class SongController {
     public List<Song> getSongs(){
 
         List<Song> Songs = SongService.findAll();
-        
+        // System.out.println("THE SONGS ARE SONGS"+ Songs);
 
         return Songs;
     }
