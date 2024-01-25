@@ -1,9 +1,10 @@
-package com.slotify.demo.controller;
+package com.slotify.demo.movies;
 import java.util.*;
-import com.slotify.demo.service.MovieService;
+import com.slotify.demo.movies.MovieService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.slotify.demo.model.Movie;
+
 @RestController
 @RequestMapping("/api/movies")
 public class MovieController {
