@@ -41,8 +41,8 @@ useEffect(() => {
             
             {movies.map((item,index)=>(
               <div className='movie-item'>
-                  <img  src = {item.image} width={200} height={200}/>
-                  <p key={index}>{item.name}</p>
+                  <img  src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
+                  <p className='album-name' key={index}>{item.name}</p>
                </div>
 
             ))}
