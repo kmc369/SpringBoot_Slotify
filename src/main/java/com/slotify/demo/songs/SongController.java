@@ -18,7 +18,6 @@ public class SongController {
     public List<Song> getSongs(){
 
         List<Song> Songs = SongService.findAll();
-        // System.out.println("THE SONGS ARE SONGS"+ Songs);
 
         return Songs;
     }
