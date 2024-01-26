@@ -35,7 +35,7 @@ useEffect(() => {
 
     return(
         <>
-        <p>Hello</p>
+
         
            <div className='movielist-container'>
             
