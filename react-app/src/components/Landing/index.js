@@ -9,34 +9,47 @@ const dispatch = useDispatch()
 let [movies,setMovies] = useState([])
 
 useEffect(() => {
+    let movieList;
     async function fetchMovies() {
       try {
-        // Assuming getMoviesThunk returns a promise
-        await dispatch(movieActions.getMoviesThunk());
+       
+       movieList = await dispatch(movieActions.getMoviesThunk());
+       setMovies(movieList)
+       
       } catch (error) {
         console.error('Error fetching movies:', error);
       }
     }
-
+  
     fetchMovies();
+
+
   }, [dispatch]);
 
-  if (!movies){
+
+  if (movies.length===0){
     return null
   }
 
+
+
     return(
         <>
+        <p>Hello</p>
+        
            <div className='movielist-container'>
-              {movies.map((item, index)=>{
-                <div className='movie-item'>
-                    <img src={item.image} />
-                    <p> {item.name}</p>
-                  </div>
-              })}
+            
+            {movies.map((item,index)=>(
+              <div className='movie-item'>
+                  <img  src = {item.image} width={200} height={200}/>
+                  <p key={index}>{item.name}</p>
+               </div>
+
+            ))}
 
            </div>
         </>
     )
 }
+
 
