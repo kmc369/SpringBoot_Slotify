@@ -11,10 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class SongService {
 
 @Autowired
-public SongRepository songRepo;
+private SongRepository songRepo;
 
 public List<Song> findAll() {
     List<Song> Songs = (List<Song>) songRepo.findAll();
+    
     return Songs;
 }
 

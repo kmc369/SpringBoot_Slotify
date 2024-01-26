@@ -21,10 +21,21 @@ useEffect(() => {
     fetchMovies();
   }, [dispatch]);
 
+  if (!movies){
+    return null
+  }
 
     return(
         <>
-            <h1>list of movies are</h1>
+           <div className='movielist-container'>
+              {movies.map((item, index)=>{
+                <div className='movie-item'>
+                    <img src={item.image} />
+                    <p> {item.name}</p>
+                  </div>
+              })}
+
+           </div>
         </>
     )
 }
