@@ -27,7 +27,7 @@ useEffect(() => {
   }, [dispatch]);
 
 
-  if (movies.length===0){
+  if (!movies){
     return null
   }
 
