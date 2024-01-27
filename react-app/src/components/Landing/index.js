@@ -27,7 +27,7 @@ useEffect(() => {
   }, [dispatch]);
 
 
-  if (movies.length===0){
+  if (!movies){
     return null
   }
 
@@ -35,14 +35,14 @@ useEffect(() => {
 
     return(
         <>
-        <p>Hello</p>
+
         
            <div className='movielist-container'>
             
             {movies.map((item,index)=>(
               <div className='movie-item'>
-                  <img  src = {item.image} width={200} height={200}/>
-                  <p key={index}>{item.name}</p>
+                  <img  src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
+                  <p className='album-name' key={index}>{item.name}</p>
                </div>
 
             ))}
