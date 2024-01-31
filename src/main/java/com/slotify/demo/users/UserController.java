@@ -18,7 +18,7 @@ import com.slotify.demo.user.UserService;
 @RestController
 @RequestMapping("/api/auth")
 @CrossOrigin(origins = "http://localhost:3000")
-public class AuthController {
+public class UserController {
 
     @Autowired
     private AuthenticationManager authenticationManager;
