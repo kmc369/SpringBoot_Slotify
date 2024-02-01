@@ -11,6 +11,8 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.context.SecurityContextHolder;
 
+import com.slotify.demo.model.user;
+
 import com.slotify.demo.user.UserService;
 
 
@@ -27,7 +29,7 @@ public class UserController {
     private UserService authenticationService;
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody LoginForm loginForm) {
+    public ResponseEntity<String> login(@RequestBody User loginForm) {
         try {
             // Authenticate the user
             Authentication authentication = authenticationManager.authenticate(
