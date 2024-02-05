@@ -39,10 +39,10 @@ public class UserController {
             // Set the authentication in the SecurityContext
             SecurityContextHolder.getContext().setAuthentication(authentication);
 
-            // Return a success message or token
+        
             return ResponseEntity.ok("Login successful");
         } catch (AuthenticationException e) {
-            // Return an error response for invalid credentials
+           
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Invalid credentials");
         }
     }
