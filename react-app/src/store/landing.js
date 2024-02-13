@@ -15,8 +15,8 @@ export const get_movies=(data)=>{
 
 
 //thunks 
-export const getMoviesThunk = () => async(dispatch,getState) => {
-   
+export const getAlbumsThunk= () => async(dispatch,getState) => {
+   console.log("we in thunk")
     try{
         const res = await fetch('/albums/',{
             method:"GET"

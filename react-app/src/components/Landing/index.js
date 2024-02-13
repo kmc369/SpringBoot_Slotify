@@ -2,18 +2,19 @@ import './landingPage.css'
 import React, { useEffect,useState } from 'react';
 import { useDispatch,useSelector } from "react-redux";
 import { useHistory } from 'react-router-dom/cjs/react-router-dom.min';
-import * as movieActions from '../../store/landing'
+import * as songActions from '../../store/landing'
 
 export default function Landing(){
 const dispatch = useDispatch()
 let [movies,setMovies] = useState([])
-
+const history = useHistory()
 useEffect(() => {
     let movieList;
     async function fetchMovies() {
       try {
-       
-       movieList = await dispatch(movieActions.getMoviesThunk());
+        console.log("we in here")
+
+       movieList = await dispatch(songActions.getAlbumsThunk());
        setMovies(movieList)
        
       } catch (error) {
@@ -41,7 +42,7 @@ useEffect(() => {
             
             {movies.map((item,index)=>(
               <div className='movie-item'>
-                  <img  src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
+                  <img onClick={()=>history.push('/albums/songs')} src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
                   <p className='album-name' key={index}>{item.name}</p>
                </div>
 

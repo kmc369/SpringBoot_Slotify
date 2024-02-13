@@ -4,6 +4,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import com.slotify.demo.model.Album;
 import com.slotify.demo.albums.AlbumService;
+
+
 @RestController
 @RequestMapping("/albums")
 @CrossOrigin(origins = "http://localhost:3000")
