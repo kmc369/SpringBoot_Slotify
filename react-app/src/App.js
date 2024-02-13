@@ -6,7 +6,7 @@ import LoginFormPage from "./components/LoginFormPage";
 import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import Landing from "./components/Landing"
-
+import Songs from "./components/Songs"
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(true);
@@ -25,6 +25,10 @@ function App() {
           <Route exact path="/" >
             <Landing />
           </Route>
+          <Route exact path="/albums/songs" >
+            <Songs />
+          </Route>
+          
           <Route exact path="/signup">
             <SignupFormPage />
           </Route>
