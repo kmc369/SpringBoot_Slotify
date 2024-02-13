@@ -42,6 +42,34 @@ export const getAlbumsThunk= () => async(dispatch,getState) => {
 }
 
 
+export const getSongsOfAlbum= () => async(dispatch,getState) => {
+    console.log("we in thunk")
+     try{
+         const res = await fetch('/albums/',{
+             method:"GET"
+         })
+ 
+         if(res.ok){
+             const data = await res.json()
+             dispatch(get_movies(data))
+             return data
+         }
+         else{
+         
+             const error = await res.json()
+             return error 
+         }
+ 
+ 
+     }catch(error){
+       
+ 
+     }
+ 
+ }
+ 
+
+
 
 //reducer
 
