@@ -25,7 +25,7 @@ function App() {
           <Route exact path="/" >
             <Landing />
           </Route>
-          <Route exact path="/albums/songs" >
+          <Route exact path="/albums/songs/:item_id" >
             <Songs />
           </Route>
           

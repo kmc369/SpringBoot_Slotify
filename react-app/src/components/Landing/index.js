@@ -12,7 +12,7 @@ useEffect(() => {
     let movieList;
     async function fetchMovies() {
       try {
-        console.log("we in here")
+      
 
        movieList = await dispatch(songActions.getAlbumsThunk());
        setMovies(movieList)
@@ -42,7 +42,7 @@ useEffect(() => {
             
             {movies.map((item,index)=>(
               <div className='movie-item'>
-                  <img onClick={()=>history.push('/albums/songs')} src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
+                  <img onClick={()=>history.push(`/albums/songs/${item.id}`)} src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
                   <p className='album-name' key={index}>{item.name}</p>
                </div>
 
