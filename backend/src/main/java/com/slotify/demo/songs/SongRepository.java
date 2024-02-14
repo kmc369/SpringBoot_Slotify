@@ -9,7 +9,7 @@ import com.slotify.demo.model.Song;
 
 @Repository
 public interface SongRepository  extends JpaRepository<Song,Integer> {
-
+    List<Song> findByAlbumId(int albumId);
     
 
 }

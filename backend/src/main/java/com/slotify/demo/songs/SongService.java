@@ -19,6 +19,11 @@ public List<Song> findAll() {
     return Songs;
 }
 
+public List<Song> findByAlbumId(int album_id ) {
+    List<Song> Songs = (List<Song>) songRepo.findByAlbumId();
+    
+    return Songs;
+}
 
 
 
