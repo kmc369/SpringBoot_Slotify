@@ -1,9 +1,9 @@
-const GET_MOVIES = 'get/movies'
-
+const GET_ALBUMS = 'get/albums'
+const GET_SONGS = 'get/songs'
 
 
 //actions
-export const get_movies=(data)=>{
+export const getAlbums=(data)=>{
 
     return {
         type:GET_MOVIES,
@@ -11,6 +11,17 @@ export const get_movies=(data)=>{
 
     }
 }
+
+export const getSongs=(data)=>{
+
+    return {
+        type:GET_MOVIES,
+        payload:data
+
+    }
+}
+
+
 
 
 
@@ -24,7 +35,7 @@ export const getAlbumsThunk= () => async(dispatch,getState) => {
 
         if(res.ok){
             const data = await res.json()
-            dispatch(get_movies(data))
+            dispatch(getAlbums(data))
             return data
         }
         else{
@@ -42,16 +53,16 @@ export const getAlbumsThunk= () => async(dispatch,getState) => {
 }
 
 
-export const getSongsOfAlbum= () => async(dispatch,getState) => {
-    console.log("we in thunk")
+export const getSongsOfAlbum= (album_id) => async(dispatch,getState) => {
+  
      try{
-         const res = await fetch('/albums/',{
+         const res = await fetch(`/albums/songs/${album_id}`,{
              method:"GET"
          })
  
          if(res.ok){
              const data = await res.json()
-             dispatch(get_movies(data))
+             dispatch(ggetSongs(data))
              return data
          }
          else{
@@ -77,7 +88,16 @@ const initial_state = {allMovies:{}, singleMovie:{}}
 
 const Reducer = (state = initial_state,action) =>{
     switch(action.type){
-        case GET_MOVIES :{
+        case GET_ALBUMS :{
+           
+            const newState = {...state , allMovies:{...state.allMovies}}
+
+            newState.allMovies = action.payload
+
+            return newState
+
+        }
+        case GET_SONGS :{
            
             const newState = {...state , allMovies:{...state.allMovies}}
 
