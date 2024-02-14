@@ -19,10 +19,15 @@ public List<Song> findAll() {
     return Songs;
 }
 
-public List<Song> findByAlbumId(int album_id ) {
-    List<Song> Songs = (List<Song>) songRepo.findByAlbumId();
+public List<Song> findByAlbumId(int album_id) {
+    List<Song> album_songs = (List<Song>) songRepo.findByAlbumId(album_id);
     
-    return Songs;
+    // if(!album_songs){
+    //     return Collections.emptyList();
+    // }else{
+        return album_songs;
+    // }
+ 
 }
 
 

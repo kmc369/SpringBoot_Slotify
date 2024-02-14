@@ -23,14 +23,13 @@ public class SongController {
         return Songs;
     }
 
+  
+
     @GetMapping("/{album_id}")
-    public List<Song> getSongByAlbum(@PathVariable  int album_id){
-
-
-        List<Song> album_songs = SongService.findByAlbumId(album_id);
-
-        return Songs;
-    }
+    public List<Song> getSongByAlbum(@PathVariable int album_id) {
+    List<Song> album_songs = SongService.findByAlbumId(album_id);
+    return album_songs;
+}
 
 
 
