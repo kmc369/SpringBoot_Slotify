@@ -53,7 +53,7 @@ export const getAlbumsThunk= () => async(dispatch,getState) => {
 }
 
 
-export const getSongsOfAlbum= (album_id) => async(dispatch,getState) => {
+export const getSongsOfAlbum = (album_id) => async(dispatch,getState) => {
   
      try{
          const res = await fetch(`/albums/songs/${album_id}`,{
