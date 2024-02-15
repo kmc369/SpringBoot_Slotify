@@ -6,7 +6,7 @@ const GET_SONGS = 'get/songs'
 export const getAlbums=(data)=>{
 
     return {
-        type:GET_MOVIES,
+        type:GET_ALBUMS,
         payload:data
 
     }
@@ -15,7 +15,7 @@ export const getAlbums=(data)=>{
 export const getSongs=(data)=>{
 
     return {
-        type:GET_MOVIES,
+        type:GET_SONGS,
         payload:data
 
     }
@@ -62,7 +62,7 @@ export const getSongsOfAlbum= (album_id) => async(dispatch,getState) => {
  
          if(res.ok){
              const data = await res.json()
-             dispatch(ggetSongs(data))
+             dispatch(getSongs(data))
              return data
          }
          else{
@@ -84,24 +84,24 @@ export const getSongsOfAlbum= (album_id) => async(dispatch,getState) => {
 
 //reducer
 
-const initial_state = {allMovies:{}, singleMovie:{}}
+const initial_state = {allAlbums:{}, singleAlbum:{}}
 
 const Reducer = (state = initial_state,action) =>{
     switch(action.type){
         case GET_ALBUMS :{
            
-            const newState = {...state , allMovies:{...state.allMovies}}
+            const newState = {...state , allAlbumss:{...state.allAlbums}}
 
-            newState.allMovies = action.payload
+            newState.allAlbums = action.payload
 
             return newState
 
         }
         case GET_SONGS :{
            
-            const newState = {...state , allMovies:{...state.allMovies}}
+            const newState = {...state , singleAlbum:{...state.singleAlbum}}
 
-            newState.allMovies = action.payload
+            newState.singleAlbum = action.payload
 
             return newState
 
