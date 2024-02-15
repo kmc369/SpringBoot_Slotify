@@ -7,6 +7,7 @@ import { authenticate } from "./store/session";
 import Navigation from "./components/Navigation";
 import Landing from "./components/Landing"
 import Songs from "./components/Songs"
+import SideBar from "./components/SideBar";
 function App() {
   const dispatch = useDispatch();
   const [isLoaded, setIsLoaded] = useState(true);
@@ -24,6 +25,7 @@ function App() {
           </Route>
           <Route exact path="/" >
             <Landing />
+           
           </Route>
           <Route exact path="/albums/songs/:item_id" >
             <Songs />
