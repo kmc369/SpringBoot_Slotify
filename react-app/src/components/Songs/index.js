@@ -15,11 +15,13 @@ export default function Songs(){
         async function fetchSongs(){
             try{
 
-                songlist = await dispatch(songActions.getSongsOfAlbum())
+                songlist = await dispatch(songActions.getSongsOfAlbum(1))
             }catch{
 
             }
         }
+
+        fetchSongs()
     })
 
     return (

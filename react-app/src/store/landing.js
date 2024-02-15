@@ -1,16 +1,27 @@
-const GET_MOVIES = 'get/movies'
-
+const GET_ALBUMS = 'get/albums'
+const GET_SONGS = 'get/songs'
 
 
 //actions
-export const get_movies=(data)=>{
+export const getAlbums=(data)=>{
 
     return {
-        type:GET_MOVIES,
+        type:GET_ALBUMS,
         payload:data
 
     }
 }
+
+export const getSongs=(data)=>{
+
+    return {
+        type:GET_SONGS,
+        payload:data
+
+    }
+}
+
+
 
 
 
@@ -24,7 +35,7 @@ export const getAlbumsThunk= () => async(dispatch,getState) => {
 
         if(res.ok){
             const data = await res.json()
-            dispatch(get_movies(data))
+            dispatch(getAlbums(data))
             return data
         }
         else{
@@ -42,16 +53,16 @@ export const getAlbumsThunk= () => async(dispatch,getState) => {
 }
 
 
-export const getSongsOfAlbum= () => async(dispatch,getState) => {
-    console.log("we in thunk")
+export const getSongsOfAlbum= (album_id) => async(dispatch,getState) => {
+  
      try{
-         const res = await fetch('/albums/',{
+         const res = await fetch(`/albums/songs/${album_id}`,{
              method:"GET"
          })
  
          if(res.ok){
              const data = await res.json()
-             dispatch(get_movies(data))
+             dispatch(getSongs(data))
              return data
          }
          else{
@@ -73,15 +84,24 @@ export const getSongsOfAlbum= () => async(dispatch,getState) => {
 
 //reducer
 
-const initial_state = {allMovies:{}, singleMovie:{}}
+const initial_state = {allAlbums:{}, singleAlbum:{}}
 
 const Reducer = (state = initial_state,action) =>{
     switch(action.type){
-        case GET_MOVIES :{
+        case GET_ALBUMS :{
            
-            const newState = {...state , allMovies:{...state.allMovies}}
+            const newState = {...state , allAlbumss:{...state.allAlbums}}
 
-            newState.allMovies = action.payload
+            newState.allAlbums = action.payload
+
+            return newState
+
+        }
+        case GET_SONGS :{
+           
+            const newState = {...state , singleAlbum:{...state.singleAlbum}}
+
+            newState.singleAlbum = action.payload
 
             return newState
 
