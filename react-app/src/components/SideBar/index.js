@@ -10,8 +10,8 @@ export default function SideBar(){
     <>
     <div className='SideBar-Container'>
             <div className='Home-Container'>
-
-                <h1>Home</h1>
+                <div><i class="fa-solid fa-music" style={{color: "white"}}><span style={{color: "rgb(33, 197, 33)"}} className="sidebar-words">Slotify</span></i></div>
+                <div><i class="fa-solid fa-house" style={{color: "#ffffff"}}><span className="sidebar-words">Home</span></i></div>
 
             </div>
 
