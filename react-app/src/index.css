@@ -3,9 +3,10 @@
     background-color: black;
 } */
 body{
-    background-color: black;
+    /* background-color: black; */
     /* height:90%;
     width: 99%;  */
-    border:3px solid gold;
+    border:3px solid purple;
+    background-color: rgb(31, 30, 30) !important;
     
 }

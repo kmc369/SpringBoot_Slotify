@@ -1,5 +1,11 @@
 .SideBar-Container{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: left;
+    border:1px solid red;
+    color:white;
+}
+
+.Home-Container{
+  padding: 10px;
 }
