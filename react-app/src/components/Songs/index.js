@@ -2,7 +2,7 @@ import './songs.css'
 import React, { useEffect,useState } from 'react';
 import { useDispatch,useSelector } from "react-redux";
 import * as songActions from '../../store/landing'
-
+import SideBar from '../SideBar';
 
 
 export default function Songs(){
@@ -25,8 +25,23 @@ export default function Songs(){
     })
 
     return (
-        <></>
-        // <><h1>hello from Songs</h1></>
-        //okay lets make a fetch 
+        <>
+
+        <div className='songs-container'>
+            <div>
+                <SideBar/>
+            </div>
+
+            <div>
+                <h1>hello world</h1>
+
+            </div>
+
+
+        </div>
+        
+        
+        </>
+       
     )
 }
