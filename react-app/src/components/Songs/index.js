@@ -16,13 +16,14 @@ export default function Songs(){
             try{
 
                 songlist = await dispatch(songActions.getSongsOfAlbum(1))
+                setSongs(songlist)
             }catch{
 
             }
         }
 
         fetchSongs()
-    })
+    },[setSongs,dispatch])
 
     return (
         <>
@@ -33,7 +34,15 @@ export default function Songs(){
             </div>
 
             <div>
-                <h1>hello world</h1>
+                {songs.map((song,index)=>(
+                    <div className='song-container'>
+                        <p key={index}>{song.name}</p>
+
+
+                    </div>
+                
+                   
+                ))}
 
             </div>
 
