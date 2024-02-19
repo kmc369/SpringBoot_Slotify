@@ -36,7 +36,7 @@ export default function Songs(){
             <div>
                 {songs.map((song,index)=>(
                     <div className='song-container'>
-                        <p key={index}>{song}</p>
+                        <p key={index}>{song.name}</p>
 
 
                     </div>
