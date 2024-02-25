@@ -31,9 +31,9 @@ function App() {
             <Songs />
           </Route>
           
-          {/* <Route exact path="/signup">
+          <Route exact path="/signup">
             <SignupFormPage />
-          </Route> */}
+          </Route>
         </Switch>
       )}
     </>
