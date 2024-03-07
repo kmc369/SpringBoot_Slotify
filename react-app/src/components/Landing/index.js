@@ -34,28 +34,28 @@ useEffect(() => {
 
 
 
-    // return(
-    //     <>
-    //     <div className='landing-container'>
-    //         <div className='sidebar-container'>
-    //         <SideBar/>
+    return(
+        <>
+        <div className='landing-container'>
+            <div className='sidebar-container'>
+            <SideBar/>
 
-    //         </div>
+            </div>
           
-    //         <div className='movielist-container'>
+            <div className='movielist-container'>
               
-    //           {movies.map((item,index)=>(
-    //             <div className='movie-item'>
-    //                 <img onClick={()=>history.push(`/albums/songs/${item.id}`)} src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
-    //                 <p className='album-name' key={index}>{item.name}</p>
-    //             </div>
+              {movies.map((item,index)=>(
+                <div className='movie-item'>
+                    <img onClick={()=>history.push(`/albums/songs/${item.id}`)} src = {item.image} width={200} height={200} style={{ borderRadius: '3px' }}/>
+                    <p className='album-name' key={index}>{item.name}</p>
+                </div>
 
-    //           ))}
+              ))}
 
-    //         </div>
-    //       </div>
-    //     </>
-    // )
+            </div>
+          </div>
+        </>
+    )
 }
 
 
