@@ -2,6 +2,7 @@
 .landing-container{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     padding:20px;
     border:1px solid red;
     
@@ -30,4 +31,15 @@
     text-align: center;
     margin-top: 5px;
 
+}
+
+/* side bar container  */
+
+.sidebar-outer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 30%;
+    border:2px solid yellow;
+    color:white;
 }

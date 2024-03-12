@@ -37,7 +37,7 @@ useEffect(() => {
     return(
         <>
         <div className='landing-container'>
-            <div className='sidebar-container'>
+            <div className='sidebar-outer-container'>
             <SideBar/>
 
             </div>
