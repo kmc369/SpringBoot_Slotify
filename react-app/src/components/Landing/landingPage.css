@@ -2,17 +2,20 @@
 .landing-container{
     display: flex;
     flex-direction: row;
-    gap:10px;
+    justify-content: space-between;
+    padding:20px;
+    border:1px solid red;
     
 }
 .movielist-container{
-    /* border:1px solid red; */
+    border:1px solid green;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap:15px;
+    width: 70%;
 
 
 }
@@ -28,4 +31,15 @@
     text-align: center;
     margin-top: 5px;
 
+}
+
+/* side bar container  */
+
+.sidebar-outer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    width: 30%;
+    border:2px solid yellow;
+    color:white;
 }

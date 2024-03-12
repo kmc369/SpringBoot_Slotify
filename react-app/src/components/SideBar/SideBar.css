@@ -1,12 +1,8 @@
 .SideBar-Container{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
-    /* border:1px solid red; */
-    border:2px solid yellow;
-    color:white;
+   border:3px solid pink;
 }
 
 .Home-Container{
   padding: 10px;
+  border:3px solid purple;
 }
