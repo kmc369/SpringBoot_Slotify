@@ -18,6 +18,7 @@
     width: 70%;
 
 
+
 }
 
 .movie-item{
@@ -30,6 +31,7 @@
  
     box-shadow: 0 0 20px rgba(136, 128, 128, 0.5); 
     z-index: 6; 
+    cursor: pointer;
 }
 
 .album-name{

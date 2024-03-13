@@ -16,7 +16,7 @@ export default function SideBar(){
             </div>
 
             <div className='Playlist-container'>
-            <div><i class="fa-solid fa-book" style={{color: "#ffffff"}}><span className="sidebar-words" style={{paddingLeft: 10}}>Library</span></i></div>
+            <div><i class="fa-solid fa-book" style={{color: "#ffffff"}}><span  className="sidebar-words" style={{paddingLeft: 10}}>Library</span></i></div>
             
 
             </div>
