@@ -28,7 +28,7 @@
 
 .movie-item:hover{
  
-    box-shadow: 0 0 20px rgba(136, 128, 128, 0.5); /* Add a box shadow */
+    box-shadow: 0 0 20px rgba(136, 128, 128, 0.5); 
     z-index: 6; 
 }
 
