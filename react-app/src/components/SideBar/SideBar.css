@@ -14,6 +14,9 @@
 .Playlist-container{
   padding: 10px;
   border:3px solid blue;
+  display: flex;
+  flex-direction: column;
+  gap:15px;
  
   
 }
@@ -48,6 +51,22 @@
   z-index: 6; 
   box-shadow: 0 0 20px rgba(232, 224, 224, 0.5); 
   background-color: rgba(232, 224, 224, 0.5);
+  border-radius: 10px;
+}
+
+.album-playlist{
+  border:1px solid gold;
+  height: 50%;
+
+  
+}
+.playlist-button{
+  cursor: pointer;
+  border: none;
+  color:black;
+  background-color: white;
+  border: none;
+  width: 80%;
   border-radius: 10px;
 }
 

@@ -17,7 +17,9 @@ export default function SideBar(){
 
             <div className='Playlist-container'>
             <div className='library-container'><i class="fa-solid fa-book" style={{color: "#ffffff"}}><span  className="sidebar-words" style={{paddingLeft: 10}}>Library</span></i></div>
-            
+            <div className='album-playlist'>
+                <button className='playlist-button'>playlist</button>
+            </div>
 
             </div>
      </div>
