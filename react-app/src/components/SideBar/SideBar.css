@@ -4,16 +4,18 @@
 
 .Home-Container{
   padding: 10px;
-  border:3px solid purple;
+  height:100px;
+  width: 60%;
   display: flex;
   flex-direction: column;
   gap:4px;
-
+  background-color: rgb(93, 93, 93);
+  border-radius: 10px;
 }
 
 .Playlist-container{
   padding: 10px;
-  border:3px solid blue;
+
   display: flex;
   flex-direction: column;
   gap:15px;
@@ -26,10 +28,7 @@
 
 }
 
-.music-container,.library-container,.house-container:hover{
-  /* box-shadow: 0 0 20px rgba(136, 128, 128, 0.5); 
-  z-index: 6;  */
-}
+
 
 .music-container:hover{
   z-index: 6; 
@@ -55,7 +54,7 @@
 }
 
 .album-playlist{
-  border:1px solid gold;
+  /* border:1px solid gold; */
   height: 50%;
 
   
@@ -67,7 +66,8 @@
   background-color: white;
   border: none;
   width: 80%;
-  border-radius: 10px;
+  border-radius: 20px;
+  height:40px;
 }
 
 
