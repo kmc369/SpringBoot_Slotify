@@ -26,6 +26,12 @@
     padding:5px;
 }
 
+.movie-item:hover{
+ 
+    box-shadow: 0 0 20px rgba(136, 128, 128, 0.5); /* Add a box shadow */
+    z-index: 6; 
+}
+
 .album-name{
     color:aliceblue;
     text-align: center;
