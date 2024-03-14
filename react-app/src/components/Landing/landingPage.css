@@ -44,10 +44,12 @@
 /* side bar container  */
 
 .sidebar-outer-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: left;
+  
     width: 30%;
     border:2px solid yellow;
     color:white;
+    display: flex;
+    flex-direction: column;
+   
+
 }
