@@ -38,7 +38,7 @@ useEffect(() => {
         <>
         <div className='landing-container'>
             <div className='sidebar-outer-container'>
-            {/* <SideBar/> */}
+            <SideBar/>
 
             </div>
           
