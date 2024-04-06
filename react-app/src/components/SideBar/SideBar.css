@@ -35,13 +35,13 @@
 
 
 
-/* .music-container:hover{
+.music-container:hover{
   z-index: 6; 
   box-shadow: 0 0 20px rgba(232, 224, 224, 0.5); 
   background-color: rgba(232, 224, 224, 0.5);
   border-radius: 10px;
 
-} */
+}
 
 .library-container:hover{
   z-index: 6; 
